@@ -1,0 +1,92 @@
+// Code by Naru Koshin
+// Github: https://github.com/narukoshin
+.input-box
+    // On error
+    &.error
+        &:hover
+            svg path
+                fill: #B80808 !important
+                opacity: 1
+            border-color:#B80808 !important
+        border-color: #B80808 !important
+    svg path
+        transition: fill 300ms ease-in-out
+    &:hover
+        // icon color
+        svg path
+            fill: #4066A5 !important
+            opacity: 1
+        border: 1px solid #4066A5
+        border-left: 4px solid #4066A5 !important
+    &-icon
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+        margin-right: 30px
+        padding-left: 20px
+    display: flex
+    transition: border-color 300ms ease-in-out
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    border: 1px solid #E3E3E4
+    background-color: #fff
+    border-left: 4px solid #4066A5
+    height: 70px
+    input
+        border: 0
+        outline: 0
+        width: 90%
+        padding-left: 3rem
+        font-size: 13pt
+
+// Error message
+.error-message
+    margin-left: 8rem
+    margin-top: 1rem
+    font-family: Arial
+    font-weight: 700
+    color: #B80808
+    text-align: left
+
+label.checkbox-box input,
+.tos-text
+    display: inline-block
+    vertical-align: middle
+    user-select: none !important
+
+.tos-text
+    a
+        color: #233759
+        user-select: none
+    color: #6A707B
+    margin-left: 1rem
+
+
+.checkbox-icon
+    position: absolute
+    margin-top: -21px
+    margin-left: 5px
+
+input[type="checkbox"]:checked ~ svg
+    display: none !important
+    opacity: 0 !important
+
+label.checkbox-box input[type="checkbox"]
+    &:not(:checked)
+        & ~ .checkbox-icon
+            display: none
+        border: 1px solid #E3E3E4
+        
+    &:checked
+        border: 1px solid #4066A5
+        background-color: #4066A5
+    width: 25px
+    height: 25px
+    border-radius: 3px
+    margin: 0
+    padding: 0
+    transition: all 300ms ease-in-out
+    position: relative
+    appearance: none

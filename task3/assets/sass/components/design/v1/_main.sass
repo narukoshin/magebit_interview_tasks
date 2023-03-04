@@ -1,0 +1,82 @@
+// Code by Naru Koshin
+// Github: https://github.com/narukoshin
+@import config
+@import colors
+    
+.--main-container
+    width: 100%
+    display: flex
+    .picture--background
+        display: block
+        position: relative
+        // Importing the picture
+        background-image: url($picture)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        width: 100%
+        height: 100vh
+        flex: 0 0 60%
+    .main--block
+        background-color: #fff
+        flex: 0 0 40%
+    .panel
+        display: block
+        position: relative
+        top: 374px
+        z-index: 1
+        width: 100%
+        margin: 0 auto
+        &--title
+            text-align: center
+            font-size: 32pt
+            font-family: 'Georgia'
+            font-style: normal
+            font-weight: 400
+            line-height: 44px
+            &-info
+                position: relative
+                top: 15px
+                text-align: center
+                font-family: 'Arial'
+                font-style: normal
+                font-weight: 400
+                line-height: 28px
+                color: #6A707B
+    .tos-acknowledge
+        margin-left: 10rem
+        margin-top: 2rem
+    .seperator
+        width: 400px
+        height: 1px
+        background: $seperator
+        position: relative
+        margin: 0 auto
+        margin-top: 3rem
+        margin-bottom: 3rem
+    .socials
+        text-align: center
+        &-item
+            // Hovers //
+            // Social colors
+            @each $name, $color in $socials
+                &##{$name}:hover
+                    border-color: $color
+                    background-color: $color
+            // Global hover
+            &:hover
+                svg path
+                    fill: #fff
+                    opacity: 1
+            //////////////////////
+            svg
+                position: relative
+                top: 1.5px
+            display: inline-block
+            cursor: pointer
+            transition: all 300ms ease-in-out
+            border: 2px solid #E3E3E4
+            border-radius: 50%
+            vertical-align: middle
+            padding: 10px 13px 10px 13px
+            margin-left: 1rem
